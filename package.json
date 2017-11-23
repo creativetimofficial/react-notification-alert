@@ -1,6 +1,6 @@
 {
     "name": "react-notification-alert",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Bootstrap 4 react alert notification system, using reactstrap bootstrap 4 beta components",
     "main": "index.js",
     "scripts": {
