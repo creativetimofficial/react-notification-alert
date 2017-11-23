@@ -1,0 +1,42 @@
+{
+    "name": "react-notification-alert",
+    "version": "1.0.0",
+    "description": "Bootstrap 4 react alert notification system, using reactstrap bootstrap 4 beta components",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/creativetimofficial/react-notification-alert.git"
+    },
+    "keywords": [
+        "react",
+        "react-component",
+        "component",
+        "reactstrap",
+        "reactstrap-component",
+        "bootstrap4",
+        "react-bootstrap",
+        "react-bootstrap4",
+        "notification",
+        "notify",
+        "react-notification",
+        "alert",
+        "react-alert"
+    ],
+    "dependencies": {},
+    "peerDependencies": {
+        "react": "^16.1.0",
+        "reactstrap": "^5.0.0-alpha.4",
+        "bootstrap": "^4.0.0-beta",
+        "jquery": "^3.2.1",
+        "popper.js": "^1.12.3"
+    },
+    "author": "Creative Tim <hello@creative-tim.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/creativetimofficial/react-notification-alert/issues"
+    },
+    "homepage": "https://github.com/creativetimofficial/react-notification-alert#readme"
+}
