@@ -78,7 +78,7 @@ class NotificationAlert extends React.Component{
             }
         }
         var notification = (
-            <Alert color={options.type} className="alert-with-icon animated fadeInDown" closeClassName="now-ui-icons ui-1_simple-remove" toggle={() => this.onDismiss(nNumber,options.place)} key={nNumber} >
+            <Alert color={options.type} className="alert-with-icon animated fadeInDown" toggle={() => this.onDismiss(nNumber,options.place)} key={nNumber} >
                 <span data-notify="icon" className="now-ui-icons ui-1_bell-53"></span>
                 <span data-notify="message">{options.message}</span>
             </Alert>
