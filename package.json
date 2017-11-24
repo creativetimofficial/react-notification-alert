@@ -1,10 +1,13 @@
 {
     "name": "react-notification-alert",
-    "version": "1.0.1",
+    "version": "0.1.0",
     "description": "Bootstrap 4 react alert notification system, using reactstrap bootstrap 4 beta components",
-    "main": "index.js",
+    "main": "build/index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "build": "babel lib -d build",
+        "lint": "eslint lib/**; exit 0",
+        "lint:watch": "esw -w lib/**",
+        "prepublish": "npm run build"
     },
     "repository": {
         "type": "git",
@@ -25,6 +28,12 @@
         "alert",
         "react-alert"
     ],
+    "babel": {
+        "presets": [
+            "env",
+            "react"
+        ]
+    },
     "dependencies": {},
     "peerDependencies": {
         "react": "^16.1.0",
@@ -38,5 +47,21 @@
     "bugs": {
         "url": "https://github.com/creativetimofficial/react-notification-alert/issues"
     },
-    "homepage": "https://github.com/creativetimofficial/react-notification-alert#readme"
+    "homepage": "https://github.com/creativetimofficial/react-notification-alert#readme",
+    "devDependencies": {
+        "babel-cli": "^6.26.0",
+        "babel-core": "^6.26.0",
+        "babel-eslint": "^8.0.2",
+        "babel-preset-env": "^1.6.1",
+        "babel-preset-react": "^6.24.1",
+        "eslint": "^4.11.0",
+        "eslint-plugin-import": "^2.8.0",
+        "eslint-plugin-jsx-a11y": "^6.0.2",
+        "eslint-plugin-react": "^7.5.1",
+        "eslint-watch": "^3.1.3",
+        "polished": "^1.9.0",
+        "prop-types": "^15.6.0",
+        "react": "^16.1.1",
+        "react-dom": "^16.1.1"
+    }
 }
