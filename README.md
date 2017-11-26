@@ -64,7 +64,7 @@ String used to add an icon to the notification.
 
 ### *autoDismiss*
 This prop is used to tell the notification after how many **seconds** to auto close.
-If is set to a value lower than 0, then the notification will not auto close.
+If is set to a value lower than or equal to 0, then the notification will not auto close.
 
 ## Example code
 
@@ -122,5 +122,5 @@ Bootstrap will require the following:
 [CHANGELOG]: ./CHANGELOG.md
 
 [LICENSE]: ./LICENSE.md
-[version-badge]: https://img.shields.io/badge/version-0.0.1-blue.svg
+[version-badge]: https://img.shields.io/badge/version-0.0.2-blue.svg
 [license-badge]: https://img.shields.io/badge/license-MIT-blue.svg

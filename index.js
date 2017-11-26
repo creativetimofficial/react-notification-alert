@@ -1,9 +1,7 @@
 import React from 'react';
 import { Alert, Col } from 'reactstrap';
 
-import './animate.css';
-
-class NotificationAlert extends React.Component {
+class NotificationSystem extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -15,10 +13,7 @@ class NotificationAlert extends React.Component {
             notifyBR: []
         };
         this.onDismiss = this.onDismiss.bind(this);
-        this.notificationAlert = this.notificationAlert.bind(this);
-    }
-    heyFunc(){
-        console.log("hey");
+        this.notify = this.notify.bind(this);
     }
     onDismiss(nNumber, place, noAnimate) {
 
@@ -59,7 +54,7 @@ class NotificationAlert extends React.Component {
         sNotify["notify" + place.toUpperCase()] = notify;
         this.setState(sNotify);
     }
-    notificationAlert(options) {
+    notify(options) {
         var notify = this.state["notify" + options.place.toUpperCase()];
         var nNumber = notify.length;
         if (notify.length > 0) {
@@ -71,8 +66,8 @@ class NotificationAlert extends React.Component {
         }
         var notification = React.createElement(
             Alert,
-            { color: options.type, className: 'alert-with-icon animated fadeInDown', toggle: () => this.onDismiss(nNumber, options.place), key: nNumber },
-            React.createElement('span', { 'data-notify': 'icon', className: 'now-ui-icons ui-1_bell-53' }),
+            { color: options.type, className: 'alert-with-icon animated fadeInDown', closeClassName: 'now-ui-icons ui-1_simple-remove', toggle: () => this.onDismiss(nNumber, options.place), key: nNumber },
+            options.icon !== undefined ? React.createElement('span', { 'data-notify': 'icon', className: options.icon }) : null,
             React.createElement(
                 'span',
                 { 'data-notify': 'message' },
@@ -151,4 +146,4 @@ class NotificationAlert extends React.Component {
     }
 }
 
-export default NotificationAlert;
+export default NotificationSystem;
