@@ -1,4 +1,4 @@
-## [0.0.3] 2017-11-28
+## [0.0.4] 2017-11-28
 ### Bug fixing
 - Rename the `notify` function to `notificationAlert`
 

@@ -13,7 +13,7 @@ class NotificationAlert extends React.Component {
             notifyBR: []
         };
         this.onDismiss = this.onDismiss.bind(this);
-        this.notify = this.notify.bind(this);
+        this.notificationAlert = this.notificationAlert.bind(this);
     }
     onDismiss(nNumber, place, noAnimate) {
 
