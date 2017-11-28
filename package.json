@@ -1,6 +1,6 @@
 {
     "name": "react-notification-alert",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "React bootstrap 4 notification alert",
     "main": "index.js",
     "scripts": {
@@ -26,7 +26,10 @@
         "notify",
         "react-notification",
         "alert",
-        "react-alert"
+        "react-alert",
+        "notification-alert",
+        "alert-notification",
+        "react-notification-alert"
     ],
     "author": "Creative Tim",
     "license": "MIT",

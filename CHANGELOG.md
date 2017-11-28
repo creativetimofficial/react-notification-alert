@@ -1,3 +1,7 @@
+## [0.0.3] 2017-11-28
+### Bug fixing
+- Rename the `notify` function to `notificationAlert`
+
 ## [0.0.2] 2017-11-26
 ### Bug fixing
 - Made the icon prop to work properly

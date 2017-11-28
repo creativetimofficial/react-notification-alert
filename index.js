@@ -1,7 +1,7 @@
 import React from 'react';
 import { Alert, Col } from 'reactstrap';
 
-class NotificationSystem extends React.Component {
+class NotificationAlert extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -54,7 +54,7 @@ class NotificationSystem extends React.Component {
         sNotify["notify" + place.toUpperCase()] = notify;
         this.setState(sNotify);
     }
-    notify(options) {
+    notificationAlert(options) {
         var notify = this.state["notify" + options.place.toUpperCase()];
         var nNumber = notify.length;
         if (notify.length > 0) {
@@ -146,4 +146,4 @@ class NotificationSystem extends React.Component {
     }
 }
 
-export default NotificationSystem;
+export default NotificationAlert;

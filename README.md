@@ -109,18 +109,18 @@ export default App;
 For this component to work properly you have to have the following libraries installed in your project:
 
 ```
-`npm install --save reactstrap@next`
-`npm install --save bootstrap@4.0.0-beta.2`
+npm install --save reactstrap@next
+npm install --save bootstrap@4.0.0-beta.2
 ```
 Bootstrap will require the following:
 ```
-`npm install --save jquery`
-`npm install --save popper.js`
+npm install --save jquery
+npm install --save popper.js
 ```
 
 
 [CHANGELOG]: ./CHANGELOG.md
 
 [LICENSE]: ./LICENSE.md
-[version-badge]: https://img.shields.io/badge/version-0.0.2-blue.svg
+[version-badge]: https://img.shields.io/badge/version-0.0.3-blue.svg
 [license-badge]: https://img.shields.io/badge/license-MIT-blue.svg
