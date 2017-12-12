@@ -1,3 +1,7 @@
+## [0.0.6] 2017-12-12
+### Bug fixing
+- Moved main to dist/index.js
+
 ## [0.0.5] 2017-12-12
 ### Bug fixing
 - Added /dist folder for npmjs
