@@ -1,3 +1,7 @@
+## [0.0.5] 2017-12-12
+### Bug fixing
+- Added /dist folder for npmjs
+
 ## [0.0.4] 2017-11-28
 ### Bug fixing
 - Rename the `notify` function to `notificationAlert`

@@ -115,12 +115,11 @@ npm install --save bootstrap@4.0.0-beta.2
 Bootstrap will require the following:
 ```
 npm install --save jquery
-npm install --save popper.js
 ```
 
 
 [CHANGELOG]: ./CHANGELOG.md
 
 [LICENSE]: ./LICENSE.md
-[version-badge]: https://img.shields.io/badge/version-0.0.3-blue.svg
+[version-badge]: https://img.shields.io/badge/version-0.0.5-blue.svg
 [license-badge]: https://img.shields.io/badge/license-MIT-blue.svg
