@@ -68,7 +68,7 @@ class NotificationAlert extends React.Component {
         }
         var notification = React.createElement(
             Alert,
-            { color: options.type, className: 'alert-with-icon animated fadeInDown', closeClassName: 'now-ui-icons ui-1_simple-remove', toggle: () => this.onDismiss(nNumber, options.place), key: nNumber },
+            { color: options.type, className: 'alert-with-icon animated fadeInDown', toggle: () => this.onDismiss(nNumber, options.place), key: nNumber },
             options.icon !== undefined ? React.createElement('span', { 'data-notify': 'icon', className: options.icon }) : null,
             React.createElement(
                 'span',
