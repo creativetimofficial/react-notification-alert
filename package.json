@@ -3,8 +3,10 @@
     "version": "0.0.7",
     "description": "React bootstrap 4 notification alert",
     "main": "dist/index.js",
+    "types": "dist/index.d.ts",
     "scripts": {
-        "build": "mkdir -p dist && babel index.js -o dist/index.js"
+        "build": "mkdir -p dist && babel index.js -o dist/index.js",
+        "postbuild": "cpx index.d.ts dist/"
     },
     "babel": {
         "presets": [
@@ -45,7 +47,8 @@
         "babel-cli": "^6.26.0",
         "babel-preset-env": "^1.6.1",
         "babel-preset-react": "^6.24.1",
-        "babel-preset-stage-0": "^6.24.1"
+        "babel-preset-stage-0": "^6.24.1",
+        "cpx": "^1.5.0"
     },
     "peerDependencies": {
         "react": "^16.1.0",
