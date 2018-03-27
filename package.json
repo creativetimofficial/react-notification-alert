@@ -5,8 +5,9 @@
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
     "scripts": {
+        "prebuild": "node_modules/.bin/wget https://raw.githubusercontent.com/daneden/animate.css/master/animate.css",
         "build": "mkdir -p dist && babel index.js -o dist/index.js",
-        "postbuild": "cpx index.d.ts dist/"
+        "postbuild": "cpx ./index.d.ts dist/ && cpx ./animate.css dist/"
     },
     "babel": {
         "presets": [
@@ -48,7 +49,8 @@
         "babel-preset-env": "^1.6.1",
         "babel-preset-react": "^6.24.1",
         "babel-preset-stage-0": "^6.24.1",
-        "cpx": "^1.5.0"
+        "cpx": "^1.5.0",
+        "node-wget": "^0.4.2"
     },
     "peerDependencies": {
         "react": "^16.1.0",
