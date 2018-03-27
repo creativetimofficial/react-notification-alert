@@ -1,12 +1,3 @@
-/*
- * ****************************************************************************
- * Copyright (C) 2018-2018 WeWill3C, LLC dba Now IMS, All rights reserved.
- * Project: nowims-ui
- * Modified By: rogerk
- * Created On: March 27th, 2018
- * Last Modified: March 27th, 2018
- * ****************************************************************************
- */
 import * as React from 'react';
 
 export interface AlertOptions {
