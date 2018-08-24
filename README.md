@@ -32,7 +32,8 @@ var options = {
     message: ,
     type: ,
     icon: ,
-    autoDismiss:
+    autoDismiss: ,
+    closeButton: ,
 }
 ```
 
@@ -65,6 +66,9 @@ String used to add an icon to the notification.
 ### *autoDismiss*
 This prop is used to tell the notification after how many **seconds** to auto close.
 If is set to a value lower than or equal to 0, then the notification will not auto close.
+
+### *closeButton*
+If this prop is set to false, than no close button will render in the notification.
 
 ## Example code
 
@@ -109,8 +113,8 @@ export default App;
 For this component to work properly you have to have the following libraries installed in your project:
 
 ```
-npm install --save reactstrap@next
-npm install --save bootstrap@4.0.0-beta.2
+npm install --save reactstrap
+npm install --save bootstrap
 ```
 Bootstrap will require the following:
 ```
@@ -121,5 +125,5 @@ npm install --save jquery
 [CHANGELOG]: ./CHANGELOG.md
 
 [LICENSE]: ./LICENSE.md
-[version-badge]: https://img.shields.io/badge/version-0.0.7-blue.svg
+[version-badge]: https://img.shields.io/badge/version-0.0.8-blue.svg
 [license-badge]: https://img.shields.io/badge/license-MIT-blue.svg

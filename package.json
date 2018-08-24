@@ -1,10 +1,10 @@
 {
     "name": "react-notification-alert",
-    "version": "0.0.7",
+    "version": "0.0.8",
     "description": "React bootstrap 4 notification alert",
     "main": "dist/index.js",
     "scripts": {
-        "build": "mkdir -p dist && babel index.js -o dist/index.js"
+        "build": "mkdir -p dist && babel index.js -o dist/index.js && cp animate.css dist/animate.css"
     },
     "babel": {
         "presets": [
@@ -48,7 +48,7 @@
         "babel-preset-stage-0": "^6.24.1"
     },
     "peerDependencies": {
-        "react": "^16.1.0",
-        "reactstrap": "^5.0.0-alpha.4"
+        "react": "16.x.x",
+        "reactstrap": "6.x.x"
     }
 }
