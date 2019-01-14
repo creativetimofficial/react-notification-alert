@@ -1,8 +1,6 @@
 import React from "react";
 import { Alert, Col } from "reactstrap";
 
-import "./animate.css";
-
 class NotificationAlert extends React.Component {
   constructor(props) {
     super(props);

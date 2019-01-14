@@ -1,3 +1,8 @@
+## [0.0.9] 2019-01-14
+### Bug fixing
+- Updated peer dependecies
+- Css is now not imported directly, you need to import it in your project
+
 ## [0.0.8] 2017-08-24
 ### Bug fixing
 - Updated dependecies

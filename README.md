@@ -22,6 +22,13 @@ Somewhere in your component call `notificationAlert(options)` function like:
 
 `this.refs.notificationAlert.notificationAlert(options);`
 
+## Styles
+
+Do not forget to import our styles in your project:
+```
+import "react-notification-alert/dist/animate.css";
+```
+
 ## *options* parameter
 
 This parameter has to be a javascript object with the following props:
@@ -125,5 +132,5 @@ npm install --save jquery
 [CHANGELOG]: ./CHANGELOG.md
 
 [LICENSE]: ./LICENSE.md
-[version-badge]: https://img.shields.io/badge/version-0.0.8-blue.svg
+[version-badge]: https://img.shields.io/badge/version-0.0.9-blue.svg
 [license-badge]: https://img.shields.io/badge/license-MIT-blue.svg
