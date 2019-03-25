@@ -60,12 +60,13 @@ class NotificationAlert extends React.Component {
       }
     }
     if (noAnimate === undefined) {
-      setTimeout(
+      let id = setTimeout(
         function() {
           this.onDismiss(nNumber, place, "noAnimate");
         }.bind(this),
         800
       );
+      console.log(id);
     }
     sNotify = {};
     sNotify["notify" + place.toUpperCase()] = notify;
@@ -109,13 +110,15 @@ class NotificationAlert extends React.Component {
     var sNotify = {};
     sNotify["notify" + options.place.toUpperCase()] = notify;
     // aici pui notify[notify.length-1].key
-    if (options.autoDismiss > 0)
-      setTimeout(
+    if (options.autoDismiss > 0){
+      let id = setTimeout(
         function() {
           this.onDismiss(nNumber, options.place);
         }.bind(this),
         options.autoDismiss * 1000 + (notify.length - 1) * 1000
       );
+      console.log(id);
+    }
     this.setState(sNotify);
   }
   showAllNotifications(place) {
