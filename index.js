@@ -10,16 +10,16 @@ class NotificationAlert extends React.Component {
       notifyTR: [],
       notifyBL: [],
       notifyBC: [],
-      notifyBR: []
+      notifyBR: [],
+      notifyID: []
     };
     this.onDismiss = this.onDismiss.bind(this);
     this.notificationAlert = this.notificationAlert.bind(this);
   }
   // to stop the warning of calling setState of unmounted component
   componentWillUnmount() {
-    var id = window.setTimeout(null, 0);
-    while (id--) {
-      window.clearTimeout(id);
+    for(let i = 0; i < this.state.notifyID.length; i++){
+      window.clearTimeout(this.state.notifyID[i]);
     }
   }
   onDismiss(nNumber, place, noAnimate) {
@@ -66,7 +66,9 @@ class NotificationAlert extends React.Component {
         }.bind(this),
         800
       );
-      console.log(id);
+      this.setState({
+        notifyID: [id].concat(this.state.notifyID)
+      })
     }
     sNotify = {};
     sNotify["notify" + place.toUpperCase()] = notify;
@@ -117,7 +119,9 @@ class NotificationAlert extends React.Component {
         }.bind(this),
         options.autoDismiss * 1000 + (notify.length - 1) * 1000
       );
-      console.log(id);
+      this.setState({
+        notifyID: [id].concat(this.state.notifyID)
+      })
     }
     this.setState(sNotify);
   }
