@@ -1,6 +1,6 @@
 {
   "name": "react-notification-alert",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "React bootstrap 4 notification alert",
   "main": "dist/index.js",
   "scripts": {
@@ -49,6 +49,6 @@
   },
   "peerDependencies": {
     "react": "16.x.x",
-    "reactstrap": "7.x.x"
+    "reactstrap": "8.x.x"
   }
 }

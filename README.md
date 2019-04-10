@@ -132,5 +132,5 @@ npm install --save jquery
 [CHANGELOG]: ./CHANGELOG.md
 
 [LICENSE]: ./LICENSE.md
-[version-badge]: https://img.shields.io/badge/version-0.0.11-blue.svg
+[version-badge]: https://img.shields.io/badge/version-0.0.12-blue.svg
 [license-badge]: https://img.shields.io/badge/license-MIT-blue.svg
