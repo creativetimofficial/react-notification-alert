@@ -15,6 +15,7 @@ class NotificationAlert extends React.Component {
     };
     this.onDismiss = this.onDismiss.bind(this);
     this.notificationAlert = this.notificationAlert.bind(this);
+    this.refNotification = React.createRef();
   }
   // to stop the warning of calling setState of unmounted component
   componentWillUnmount() {
@@ -179,7 +180,7 @@ class NotificationAlert extends React.Component {
   render() {
     return React.createElement(
       "div",
-      { ref: "notifications" },
+      { ref: this.refNotification },
       this.showAllNotifications("tl"),
       this.showAllNotifications("tc"),
       this.showAllNotifications("tr"),
