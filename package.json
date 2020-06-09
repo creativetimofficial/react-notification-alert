@@ -1,54 +1,59 @@
 {
-  "name": "react-notification-alert",
-  "version": "0.0.12",
-  "description": "React bootstrap 4 notification alert",
-  "main": "dist/index.js",
-  "scripts": {
-    "build": "mkdir -p dist && babel index.js -o dist/index.js && cp animate.css dist/animate.css"
-  },
-  "babel": {
-    "presets": [
-      "react",
-      "env",
-      "stage-0"
-    ]
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/creativetimofficial/react-notification-alert.git"
-  },
-  "keywords": [
-    "react",
-    "react-component",
-    "component",
-    "reactstrap",
-    "reactstrap-component",
-    "bootstrap4",
-    "react-bootstrap",
-    "react-bootstrap4",
-    "notification",
-    "notify",
-    "react-notification",
-    "alert",
-    "react-alert",
-    "notification-alert",
-    "alert-notification",
-    "react-notification-alert"
-  ],
-  "author": "Creative Tim",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/creativetimofficial/react-notification-alert/issues"
-  },
-  "homepage": "https://github.com/creativetimofficial/react-notification-alert#readme",
-  "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-react": "^6.24.1",
-    "babel-preset-stage-0": "^6.24.1"
-  },
-  "peerDependencies": {
-    "react": "16.x.x",
-    "reactstrap": "8.x.x"
-  }
+    "name": "react-notification-alert",
+    "version": "0.0.12",
+    "description": "React bootstrap 4 notification alert",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "prebuild": "node_modules/.bin/wget https://raw.githubusercontent.com/daneden/animate.css/master/animate.css",
+        "build": "mkdir -p dist && babel index.js -o dist/index.js",
+        "postbuild": "cpx ./index.d.ts dist/ && cpx ./animate.css dist/"
+    },
+    "babel": {
+        "presets": [
+            "react",
+            "env",
+            "stage-0"
+        ]
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/creativetimofficial/react-notification-alert.git"
+    },
+    "keywords": [
+        "react",
+        "react-component",
+        "component",
+        "reactstrap",
+        "reactstrap-component",
+        "bootstrap4",
+        "react-bootstrap",
+        "react-bootstrap4",
+        "notification",
+        "notify",
+        "react-notification",
+        "alert",
+        "react-alert",
+        "notification-alert",
+        "alert-notification",
+        "react-notification-alert"
+    ],
+    "author": "Creative Tim",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/creativetimofficial/react-notification-alert/issues"
+    },
+    "homepage": "https://github.com/creativetimofficial/react-notification-alert#readme",
+    "devDependencies": {
+        "babel-cli": "^6.26.0",
+        "babel-preset-env": "^1.6.1",
+        "babel-preset-react": "^6.24.1",
+        "babel-preset-stage-0": "^6.24.1",
+        "cpx": "^1.5.0",
+        "node-wget": "^0.4.2"
+    },
+    "peerDependencies": {
+        "react": "^16.1.0",
+        "reactstrap": "^5.0.0-alpha.4"
+    }
 }
