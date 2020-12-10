@@ -1,3 +1,11 @@
+## [0.0.13] 2020-12-10
+### Enhancements
+- Add `onClick` and `zIndex` prop for better control over the notifications. Check the `README` for more information.
+### Bug fixing
+- Updated peer dependecies
+- https://github.com/creativetimofficial/react-notification-alert/issues/7
+- https://github.com/creativetimofficial/react-notification-alert/issues/8
+
 ## [0.0.9] 2019-01-14
 ### Bug fixing
 - Updated peer dependecies

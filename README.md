@@ -14,7 +14,7 @@ You can import react-notification-alert in your application like so:
 
 After that, in your component render method add the following line:
 
-`<NotificationAlert ref="notificationAlert" />`
+`<NotificationAlert ref="notificationAlert" zIndex={1031} onClick={() => console.log("hey")} />`
 
 We've used `ref="notificationAlert"` property on the `NotificationAlert` tag to access this components properties.
 
@@ -29,6 +29,12 @@ Do not forget to import our styles in your project:
 import "react-notification-alert/dist/animate.css";
 ```
 
+## *zIndex*
+If you want to add a special zIndex to the notification, if not, `9999` will be set as default.
+
+## *onClick*
+This function will be called when the user clicks on a certain notification.
+
 ## *options* parameter
 
 This parameter has to be a javascript object with the following props:
@@ -41,6 +47,7 @@ var options = {
     icon: ,
     autoDismiss: ,
     closeButton: ,
+    zIndex: ,
 }
 ```
 
@@ -105,7 +112,7 @@ class App extends Component {
   render() {
     return (
       <div>
-          <NotificationAlert ref="notify" />
+          <NotificationAlert ref="notify" zIndex={9999} onClick={() => console.log("hey")} />
         <button onClick={() => this.myFunc()}>Hey</button>
       </div>
     );
@@ -132,5 +139,5 @@ npm install --save jquery
 [CHANGELOG]: ./CHANGELOG.md
 
 [LICENSE]: ./LICENSE.md
-[version-badge]: https://img.shields.io/badge/version-0.0.12-blue.svg
+[version-badge]: https://img.shields.io/badge/version-0.0.13-blue.svg
 [license-badge]: https://img.shields.io/badge/license-MIT-blue.svg
