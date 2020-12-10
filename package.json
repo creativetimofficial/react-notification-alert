@@ -6,7 +6,7 @@
     "types": "dist/index.d.ts",
     "scripts": {
         "build": "mkdir -p dist && babel index.js -o dist/index.js",
-        "postbuild": "cpx ./index.d.ts dist/ && cpx ./animate.css dist/"
+        "postbuild": "cp ./index.d.ts dist/ && cp ./animate.css dist/"
     },
     "babel": {
         "presets": [
@@ -90,8 +90,7 @@
         "@babel/plugin-syntax-dynamic-import": "7.8.3",
         "@babel/plugin-syntax-import-meta": "7.10.4",
         "@babel/preset-env": "7.12.10",
-        "@babel/preset-react": "7.12.10",
-        "cpx": "1.5.0"
+        "@babel/preset-react": "7.12.10"
     },
     "peerDependencies": {
         "react": "17.x.x",
