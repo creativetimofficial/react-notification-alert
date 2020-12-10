@@ -14,7 +14,7 @@ You can import react-notification-alert in your application like so:
 
 After that, in your component render method add the following line:
 
-`<NotificationAlert ref="notificationAlert" zIndex="1031" />`
+`<NotificationAlert ref="notificationAlert" zIndex={1031} onClick={() => console.log("hey")} />`
 
 We've used `ref="notificationAlert"` property on the `NotificationAlert` tag to access this components properties.
 
@@ -29,8 +29,11 @@ Do not forget to import our styles in your project:
 import "react-notification-alert/dist/animate.css";
 ```
 
-### *zIndex*
+## *zIndex*
 If you want to add a special zIndex to the notification, if not, `9999` will be set as default.
+
+## *onClick*
+This function will be called when the user clicks on a certain notification.
 
 ## *options* parameter
 
@@ -109,7 +112,7 @@ class App extends Component {
   render() {
     return (
       <div>
-          <NotificationAlert ref="notify" />
+          <NotificationAlert ref="notify" zIndex={9999} onClick={() => console.log("hey")} />
         <button onClick={() => this.myFunc()}>Hey</button>
       </div>
     );
