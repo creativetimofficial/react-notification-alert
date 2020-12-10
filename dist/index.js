@@ -9,6 +9,8 @@ exports["default"] = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
+var _propTypes = _interopRequireDefault(require("prop-types"));
+
 var _reactstrap = require("reactstrap");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -150,11 +152,12 @@ var NotificationAlert = /*#__PURE__*/function (_React$Component) {
         color: options.type,
         className: "alert-with-icon animated fadeInDown",
         toggle: toggle,
-        key: nNumber
-      }, options.icon !== undefined ? /*#__PURE__*/_react["default"].createElement("span", {
+        key: nNumber,
+        onClick: this.props.onClick
+      }, options.icon !== undefined && /*#__PURE__*/_react["default"].createElement("span", {
         "data-notify": "icon",
         className: options.icon
-      }) : null, /*#__PURE__*/_react["default"].createElement("span", {
+      }), /*#__PURE__*/_react["default"].createElement("span", {
         "data-notify": "message"
       }, options.message));
 
@@ -187,7 +190,7 @@ var NotificationAlert = /*#__PURE__*/function (_React$Component) {
           margin: "0px auto",
           position: "fixed",
           transition: "all 0.5s ease-in-out",
-          zIndex: "1031"
+          zIndex: this.props.zIndex
         };
 
         if (place.indexOf("t") !== -1) {
@@ -232,26 +235,34 @@ var NotificationAlert = /*#__PURE__*/function (_React$Component) {
           }
         }
 
-        return /*#__PURE__*/_react["default"].createElement(_reactstrap.Col, {
-          xs: 11,
-          sm: 4,
+        return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(_reactstrap.Col, {
+          xs: "11",
+          sm: "4",
           style: style
         }, this.state["notify" + place.toUpperCase()].map(function (prop, key) {
           return prop;
-        }));
+        })));
       }
     }
   }, {
     key: "render",
     value: function render() {
-      return /*#__PURE__*/_react["default"].createElement("div", {
+      return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement("div", {
         ref: this.refNotification
-      }, this.showAllNotifications("tl"), this.showAllNotifications("tc"), this.showAllNotifications("tr"), this.showAllNotifications("bl"), this.showAllNotifications("bc"), this.showAllNotifications("br"));
+      }, this.showAllNotifications("tl"), this.showAllNotifications("tc"), this.showAllNotifications("tr"), this.showAllNotifications("bl"), this.showAllNotifications("bc"), this.showAllNotifications("br")));
     }
   }]);
 
   return NotificationAlert;
 }(_react["default"].Component);
 
+NotificationAlert.defaultProps = {
+  zIndex: 9999,
+  onClick: function onClick() {}
+};
+NotificationAlert.propTypes = {
+  zIndex: _propTypes["default"].number,
+  onClick: _propTypes["default"].func
+};
 var _default = NotificationAlert;
 exports["default"] = _default;
