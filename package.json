@@ -97,6 +97,7 @@
     },
     "peerDependencies": {
         "react": "17.x.x",
-        "reactstrap": "8.x.x"
+        "reactstrap": "8.x.x",
+        "prop-types": "15.x.x"
     }
 }
