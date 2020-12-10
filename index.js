@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Alert, Col } from "reactstrap";
 
 class NotificationAlert extends React.Component {
@@ -133,7 +134,7 @@ class NotificationAlert extends React.Component {
         margin: "0px auto",
         position: "fixed",
         transition: "all 0.5s ease-in-out",
-        zIndex: "9999"
+        zIndex: this.props.zIndex
       };
       if (place.indexOf("t") !== -1) {
         style["top"] = "20px";
@@ -189,6 +190,14 @@ class NotificationAlert extends React.Component {
       this.showAllNotifications("br")
     );
   }
+}
+
+NotificationAlert.defaultProps = {
+  zIndex: 9999
+};
+
+NotificationAlert.propTypes = {
+  zIndex: PropTypes.number
 }
 
 export default NotificationAlert;
