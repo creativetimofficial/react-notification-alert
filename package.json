@@ -1,6 +1,6 @@
 {
     "name": "react-notification-alert",
-    "version": "0.0.12",
+    "version": "0.0.13",
     "description": "React bootstrap 4 notification alert",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
