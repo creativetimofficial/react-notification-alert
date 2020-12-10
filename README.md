@@ -14,7 +14,7 @@ You can import react-notification-alert in your application like so:
 
 After that, in your component render method add the following line:
 
-`<NotificationAlert ref="notificationAlert" />`
+`<NotificationAlert ref="notificationAlert" zIndex="1031" />`
 
 We've used `ref="notificationAlert"` property on the `NotificationAlert` tag to access this components properties.
 
@@ -29,6 +29,9 @@ Do not forget to import our styles in your project:
 import "react-notification-alert/dist/animate.css";
 ```
 
+### *zIndex*
+If you want to add a special zIndex to the notification, if not, `9999` will be set as default.
+
 ## *options* parameter
 
 This parameter has to be a javascript object with the following props:
@@ -41,6 +44,7 @@ var options = {
     icon: ,
     autoDismiss: ,
     closeButton: ,
+    zIndex: ,
 }
 ```
 
