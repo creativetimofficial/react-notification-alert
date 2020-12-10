@@ -133,7 +133,7 @@ class NotificationAlert extends React.Component {
         margin: "0px auto",
         position: "fixed",
         transition: "all 0.5s ease-in-out",
-        zIndex: "1031"
+        zIndex: "9999"
       };
       if (place.indexOf("t") !== -1) {
         style["top"] = "20px";
