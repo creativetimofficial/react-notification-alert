@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Alert, Col } from "reactstrap";
 
 class NotificationAlert extends React.Component {
@@ -15,6 +16,7 @@ class NotificationAlert extends React.Component {
     };
     this.onDismiss = this.onDismiss.bind(this);
     this.notificationAlert = this.notificationAlert.bind(this);
+    this.refNotification = React.createRef();
   }
   // to stop the warning of calling setState of unmounted component
   componentWillUnmount() {
@@ -88,21 +90,15 @@ class NotificationAlert extends React.Component {
     if(options.closeButton !== false){
       toggle = () => this.onDismiss(nNumber, options.place);
     }
-    var notification = React.createElement(
-      Alert,
-      {
-        color: options.type,
-        className: "alert-with-icon animated fadeInDown",
-        toggle,
-        key: nNumber
-      },
-      options.icon !== undefined
-        ? React.createElement("span", {
-            "data-notify": "icon",
-            className: options.icon
-          })
-        : null,
-      React.createElement("span", { "data-notify": "message" }, options.message)
+    var notification = (
+      <Alert color={options.type} className="alert-with-icon animated fadeInDown" toggle={toggle} key={nNumber} onClick={this.props.onClick}>
+        {
+          options.icon !== undefined && (
+            <span data-notify="icon" className={options.icon}></span>
+          )
+        }
+        <span data-notify="message">{options.message}</span>
+      </Alert>
     );
     if (options.place.indexOf("b") !== -1) {
       notify.unshift(notification);
@@ -132,7 +128,7 @@ class NotificationAlert extends React.Component {
         margin: "0px auto",
         position: "fixed",
         transition: "all 0.5s ease-in-out",
-        zIndex: "1031"
+        zIndex: this.props.zIndex
       };
       if (place.indexOf("t") !== -1) {
         style["top"] = "20px";
@@ -167,27 +163,41 @@ class NotificationAlert extends React.Component {
             break;
         }
       }
-      return React.createElement(
-        Col,
-        { xs: 11, sm: 4, style: style },
-        this.state["notify" + place.toUpperCase()].map((prop, key) => {
-          return prop;
-        })
+      return (
+        <>
+          <Col xs="11" sm="4" style={style}>
+            {this.state["notify" + place.toUpperCase()].map((prop, key) => {
+              return prop;
+            })}
+          </Col>
+        </>
       );
     }
   }
   render() {
-    return React.createElement(
-      "div",
-      { ref: "notifications" },
-      this.showAllNotifications("tl"),
-      this.showAllNotifications("tc"),
-      this.showAllNotifications("tr"),
-      this.showAllNotifications("bl"),
-      this.showAllNotifications("bc"),
-      this.showAllNotifications("br")
+    return (
+      <>
+        <div ref={this.refNotification}>
+          {this.showAllNotifications("tl")}
+          {this.showAllNotifications("tc")}
+          {this.showAllNotifications("tr")}
+          {this.showAllNotifications("bl")}
+          {this.showAllNotifications("bc")}
+          {this.showAllNotifications("br")}
+        </div>
+      </>
     );
   }
+}
+
+NotificationAlert.defaultProps = {
+  zIndex: 9999,
+  onClick: () => {},
+};
+
+NotificationAlert.propTypes = {
+  zIndex: PropTypes.number,
+  onClick: PropTypes.func,
 }
 
 export default NotificationAlert;
